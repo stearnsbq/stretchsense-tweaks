@@ -1,6 +1,6 @@
 # Stretchsense XR Game Tweaks
 
-This Melonloader mod to make tweaks to make the gloves less frustrating to use for games / applications that are best played using full index controllers (i.e vrchat).
+Melonloader mod to make tweaks to make the gloves less frustrating to use for games / applications that are best played using full index controllers (i.e vrchat).
 
 
 ## Current Tweaks
