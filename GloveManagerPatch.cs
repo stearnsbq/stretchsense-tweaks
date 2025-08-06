@@ -33,12 +33,12 @@ namespace ControllerPassthrough
 
 
 
-            if (Gamepad.current.dpad.up.IsPressed() && g.Handedness == Handedness.LEFT)
+            if (Gamepad.current.dpad.right.IsPressed() && g.Handedness == Handedness.LEFT)
             {
                 c.SetButtonState(ControllerButton.BUTTON_1, true);
             }
 
-            if (Gamepad.current.dpad.right.IsPressed() && g.Handedness == Handedness.LEFT)
+            if (Gamepad.current.dpad.down.IsPressed() && g.Handedness == Handedness.LEFT)
             {
                 c.SetButtonState(ControllerButton.BUTTON_2, true);
             }
