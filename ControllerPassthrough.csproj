@@ -1,0 +1,448 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net472</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>disable</Nullable>
+		<RootNamespace>ControllerPassthrough</RootNamespace>
+		<LangVersion>default</LangVersion>
+		<IsPackable>false</IsPackable>
+		<AssemblyVersion>1.0.0.0</AssemblyVersion>
+		<FileVersion>1.0.0.0</FileVersion>
+		<NeutralLanguage>en-US</NeutralLanguage>
+		<AssemblyName>ControllerPassthrough</AssemblyName>
+		<LangVersion>latest</LangVersion>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+
+
+	<ItemGroup>
+
+		<Reference Include="MelonLoader">
+			<HintPath>c:\Program Files\StretchSense\XRGame\MelonLoader\net35\MelonLoader.dll</HintPath>
+		</Reference>
+		<Reference Include="0Harmony">
+			<HintPath>c:\Program Files\StretchSense\XRGame\MelonLoader\net35\0Harmony.dll</HintPath>
+		</Reference>
+		<Reference Include="ValueTupleBridge">
+			<HintPath>c:\Program Files\StretchSense\XRGame\MelonLoader\net35\ValueTupleBridge.dll</HintPath>
+		</Reference>
+		<Reference Include="Accessibility">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\Accessibility.dll</HintPath>
+		</Reference>
+		<Reference Include="BlobHandles.Runtime">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\BlobHandles.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="BlobHandles.Tests.Runtime">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\BlobHandles.Tests.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="extOSC">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\extOSC.dll</HintPath>
+		</Reference>
+		<Reference Include="Google.Protobuf">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\Google.Protobuf.dll</HintPath>
+		</Reference>
+		<Reference Include="Microsoft.Bcl.AsyncInterfaces">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+		</Reference>
+		<Reference Include="Microsoft.Bcl.TimeProvider">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\Microsoft.Bcl.TimeProvider.dll</HintPath>
+		</Reference>
+		<Reference Include="Mono.Data.Sqlite">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\Mono.Data.Sqlite.dll</HintPath>
+		</Reference>
+		<Reference Include="Mono.Posix">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\Mono.Posix.dll</HintPath>
+		</Reference>
+		<Reference Include="Mono.WebBrowser">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\Mono.WebBrowser.dll</HintPath>
+		</Reference>
+		<Reference Include="Newtonsoft.Json">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\Newtonsoft.Json.dll</HintPath>
+		</Reference>
+		<Reference Include="Novell.Directory.Ldap">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\Novell.Directory.Ldap.dll</HintPath>
+		</Reference>
+		<Reference Include="NtpTimestamp">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\NtpTimestamp.dll</HintPath>
+		</Reference>
+		<Reference Include="Ookii.Dialogs">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\Ookii.Dialogs.dll</HintPath>
+		</Reference>
+		<Reference Include="OscCore.Runtime">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\OscCore.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="OscCore.Tests.Runtime">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\OscCore.Tests.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="R3">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\R3.dll</HintPath>
+		</Reference>
+		<Reference Include="R3.Unity">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\R3.Unity.dll</HintPath>
+		</Reference>
+		<Reference Include="R3.Unity.TextMeshPro">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\R3.Unity.TextMeshPro.dll</HintPath>
+		</Reference>
+		<Reference Include="R3.Unity.XRInteractionToolkit">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\R3.Unity.XRInteractionToolkit.dll</HintPath>
+		</Reference>
+		<Reference Include="StretchSense">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\StretchSense.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.2D.Common.Runtime">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\Unity.2D.Common.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Addressables">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\Unity.Addressables.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Burst">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\Unity.Burst.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Burst.Unsafe">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\Unity.Burst.Unsafe.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.InputSystem">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\Unity.InputSystem.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.InputSystem.ForUI">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\Unity.InputSystem.ForUI.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.InternalAPIEngineBridge.001">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\Unity.InternalAPIEngineBridge.001.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.InternalAPIEngineBridge.013">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\Unity.InternalAPIEngineBridge.013.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Localization">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\Unity.Localization.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Mathematics">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\Unity.Mathematics.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Multiplayer.Center.Common">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\Unity.Multiplayer.Center.Common.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Profiling.Core">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\Unity.Profiling.Core.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.ResourceManager">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\Unity.ResourceManager.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.ScriptableBuildPipeline">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\Unity.ScriptableBuildPipeline.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.CloudDiagnostics">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\Unity.Services.CloudDiagnostics.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Core.Analytics">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\Unity.Services.Core.Analytics.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Core.Components">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\Unity.Services.Core.Components.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Core.Configuration">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\Unity.Services.Core.Configuration.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Core.Device">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\Unity.Services.Core.Device.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Core">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\Unity.Services.Core.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Core.Environments">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\Unity.Services.Core.Environments.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Core.Environments.Internal">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\Unity.Services.Core.Environments.Internal.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Core.Internal">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\Unity.Services.Core.Internal.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Core.Networking">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\Unity.Services.Core.Networking.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Core.Registration">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\Unity.Services.Core.Registration.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Core.Scheduler">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\Unity.Services.Core.Scheduler.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Core.Telemetry">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\Unity.Services.Core.Telemetry.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Core.Threading">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\Unity.Services.Core.Threading.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.SharpZipLib">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\Unity.SharpZipLib.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.SharpZipLib.Utils">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\Unity.SharpZipLib.Utils.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.TextMeshPro">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\Unity.TextMeshPro.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Timeline">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\Unity.Timeline.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.VisualScripting.Antlr3.Runtime">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.VisualScripting.Core">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\Unity.VisualScripting.Core.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.VisualScripting.Flow">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\Unity.VisualScripting.Flow.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.VisualScripting.State">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\Unity.VisualScripting.State.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AccessibilityModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.AccessibilityModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AIModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.AIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AMDModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.AMDModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AndroidJNIModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.AndroidJNIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AnimationModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.AnimationModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ARModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.ARModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AssetBundleModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AudioModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.AudioModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ClothModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.ClothModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ClusterInputModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.ClusterInputModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ClusterRendererModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.ClusterRendererModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ContentLoadModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.ContentLoadModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.CoreModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.CrashReportingModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.CrashReportingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.DirectorModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.DirectorModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.DSPGraphModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.DSPGraphModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.GameCenterModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.GameCenterModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.GIModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.GIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.GraphicsStateCollectionSerializerModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.GraphicsStateCollectionSerializerModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.GridModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.GridModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.HierarchyCoreModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.HierarchyCoreModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.HotReloadModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.HotReloadModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ImageConversionModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.IMGUIModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.InputForUIModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.InputForUIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.InputLegacyModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.InputModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.InputModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.JSONSerializeModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.JSONSerializeModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.LocalizationModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.LocalizationModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.MarshallingModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.MarshallingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.MultiplayerModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.MultiplayerModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.NVIDIAModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.NVIDIAModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ParticleSystemModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.ParticleSystemModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.PerformanceReportingModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.PerformanceReportingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.Physics2DModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.Physics2DModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.PhysicsModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.PhysicsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.PropertiesModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.PropertiesModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ScreenCaptureModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.ScreenCaptureModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ShaderVariantAnalyticsModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.ShaderVariantAnalyticsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SharedInternalsModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.SharedInternalsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SpriteMaskModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.SpriteMaskModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SpriteShapeModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.SpriteShapeModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.StreamingModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.StreamingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SubstanceModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.SubstanceModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SubsystemsModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.SubsystemsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TerrainModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.TerrainModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TerrainPhysicsModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TextCoreFontEngineModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.TextCoreFontEngineModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TextCoreTextEngineModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.TextCoreTextEngineModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TextRenderingModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TilemapModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.TilemapModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TLSModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.TLSModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UI">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.UI.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UIElementsModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.UIElementsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UIModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UmbraModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.UmbraModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityAnalyticsCommonModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.UnityAnalyticsCommonModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityAnalyticsModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityConnectModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.UnityConnectModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityCurlModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.UnityCurlModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityTestProtocolModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestAudioModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.UnityWebRequestModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestTextureModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestWWWModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.VehiclesModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.VehiclesModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.VFXModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.VFXModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.VideoModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.VideoModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.VirtualTexturingModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.VirtualTexturingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.VRModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.VRModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.WindModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.WindModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.XRModule">
+			<HintPath>c:\Program Files\StretchSense\XRGame\XR Game_Data\Managed\UnityEngine.XRModule.dll</HintPath>
+		</Reference>
+		<Reference Include="XInputDotNetPure">
+		  <HintPath>libs\Controller\XInputDotNetPure.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+
+	<PropertyGroup>
+		<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+		<EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Include="Core.cs" />
+		<Compile Include="GloveManagerPatch.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="NETStandard.Library" Version="2.0.1" />
+	</ItemGroup>
+	
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+		<Exec Command="COPY &quot;$(TargetPath)&quot; &quot;c:\Program Files\StretchSense\XRGame\Mods&quot;" />
+	</Target>
+</Project>
