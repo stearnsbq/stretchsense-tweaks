@@ -55,21 +55,7 @@ namespace ControllerPassthrough
             c.SetButtonState(ControllerButton.JOYSTICK_AXES, g.Handedness == Handedness.LEFT ? Gamepad.current.leftStick.value : Gamepad.current.rightStick.value);
              
            
-     
-
-            //if (controller_state.IsConnected)
-            //{
-            //    Melon<Core>.Logger.Msg($"X: {controller_state.ThumbSticks.Left.X}, Y: {controller_state.ThumbSticks.Left.Y}");
-            //}
-
-
-
-            // The code inside this method will run before 'PrivateMethod' is executed
         }
 
-        private static void Postfix()
-        {
-            // The code inside this method will run after 'PrivateMethod' has executed
-        }
     }
 }
